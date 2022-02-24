@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<EnableDefaultItems>false</EnableDefaultItems>
+		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+		<Description>A simple library for parsing text. 
+Source code and simple demo will be available at https://github.com/artakhak/TextParser soon. </Description>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<Company>OROptimizer</Company>
+		<Authors>Artak Hakobyan</Authors>
+		<PackageProjectUrl>https://github.com/artakhak/TextParser</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/artakhak/TextParser</RepositoryUrl>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageTags>text parser symbols</PackageTags>
+		<Copyright>Copyright 2018 (c) OROptimizer. All rights reserved.</Copyright>
+	</PropertyGroup>
+	<ItemGroup>
+	  <Compile Include="ITextSymbolsParser.cs" />
+	  <Compile Include="ITextSymbolsParserFactory.cs" />
+	  <Compile Include="ITextSymbolsParserState.cs" />
+	  <Compile Include="ParseTextErrorDetails.cs" />
+	  <Compile Include="ParseTextException.cs" />
+	  <Compile Include="TextSymbolsParserExtensionMethods.cs" />
+	</ItemGroup>
+	<ItemGroup>
+	  <None Include="README.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="JetBrains.Annotations" Version="2021.2.0" PrivateAssets="all" ExcludeAssets="runtime">
+		  <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+</Project>
