@@ -1,6 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<TargetFramework>netstandard2.0</TargetFramework>
+		<PackageVersion>1.0.1</PackageVersion>
 		<EnableDefaultItems>false</EnableDefaultItems>
 		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
 		<Description>A simple library for parsing text. 
@@ -13,7 +14,8 @@ Source code and simple demo will be available at https://github.com/artakhak/Tex
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageTags>text parser symbols</PackageTags>
-		<Copyright>Copyright 2018 (c) OROptimizer. All rights reserved.</Copyright>
+		<Copyright>Copyright 2022 (c) OROptimizer. All rights reserved.</Copyright>
+		<PackageReleaseNotes>Copule of minor text changes and a minor project file formatting.</PackageReleaseNotes>
 	</PropertyGroup>
 	<ItemGroup>
 	  <Compile Include="ITextSymbolsParser.cs" />

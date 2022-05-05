@@ -301,8 +301,6 @@ namespace TextParser
                     return false;
                 }
 
-                // TODO: Looks like we should return false here.
-                // Check if returning false will break anything and make the correction.
                 return true;
             }
 
