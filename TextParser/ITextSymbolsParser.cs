@@ -43,8 +43,8 @@ namespace TextParser
     public interface ITextSymbolsParser : ITextSymbolsParserState
     {
         /// <summary>
-        /// Moves past current character, and skips the spaces.
-        /// Returns true, if non-space character is encountered. Returns false, if end of text is reached.
+        /// Moves past the current character and skips the spaces.
+        /// Returns true if a non-space character is encountered. Returns false if the end of a text is reached.
         /// </summary>
         bool SkipCurrentCharacterAndSpaces();
 
@@ -72,14 +72,14 @@ namespace TextParser
         /// Returns true if <paramref name="positionInText"/> is less than <see cref="ITextSymbolsParserState.ParsedTextEnd"/> and greater
         /// or equal then <see cref="ITextSymbolsParserState.ParsedTextStartPosition"/>.
         /// Returns false otherwise. </returns>
-        bool MoveToToPosition(int positionInText);
+        bool MoveToPosition(int positionInText);
 
         /// <summary>
-        /// Skips spaces and stops at first non-space character.
+        /// Skips spaces and stops at the first non-space character.
         /// </summary>
         /// <returns>
-        /// Returns true if non-space character is encountered.
-        /// returns false, if end of text is reached without encountering any non-space character.
+        /// Returns true if a non-space character is encountered.
+        /// returns false if the end of a text is reached without encountering any non-space character.
         /// </returns>
         bool SkipSpaces();
 
@@ -262,7 +262,7 @@ namespace TextParser
         }
 
         /// <inheritdoc />
-        public bool MoveToToPosition(int positionInText)
+        public bool MoveToPosition(int positionInText)
         {
             _positionInText = positionInText;
             if (_positionInText < ParsedTextStartPosition)
